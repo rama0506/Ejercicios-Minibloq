@@ -1,2 +1,2 @@
-# Ejercicios-Minibloq
-Ejercicios Minibloq
+# Ejercicios Minibloq
+Repositorio con los ejercicios para Minibloq.
