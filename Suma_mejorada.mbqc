@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mbqc xmlns="http://mbqc.namespaces.minibloq.org" xmlns:minibloq="http://minibloq.org" MinibloqVersion="0.82.Beta">
+    <files/>
+    <properties>
+        <canvas visible="true"/>
+        <blocks count="57"/>
+    </properties>
+    <variables>
+        <Operando1/>
+        <Operando2/>
+        <Operador/>
+        <Resultado/>
+    </variables>
+    <blocks>
+        <ComponentStart function="Flow" commented="false" instanceName="initBoard" paramsCount="0" hasAddParamsButton="false" loadAction="noLoad"/>
+        <VariableInit function="Setter" commented="false" constantValue="Operando1" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableInit>
+        <VariableInit function="Setter" commented="false" constantValue="Operando2" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableInit>
+        <VariableInit function="Setter" commented="false" constantValue="Operador" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableInit>
+        <VariableInit function="Setter" commented="false" constantValue="Resultado" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableInit>
+        <while function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <boolConstantTrue function="Constant" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </while>
+        <Comment function="Code" commented="false" constantValue="Primer bucle para tomar el operador" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <while function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Operador" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberEqual>
+        </while>
+        <VariableSetter function="Setter" commented="false" instanceName="Operador" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <IRRemote function="Sensor" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableSetter>
+        <if function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <boolOr function="Operation" commented="false" paramsCount="2" hasAddParamsButton="true" loadAction="load">
+                <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                    <VariableGetter function="Getter" commented="false" instanceName="Operador" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                    <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_DERECHA" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                </numberEqual>
+                <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                    <VariableGetter function="Getter" commented="false" instanceName="Operador" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                    <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_IZQUIERDA" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                </numberEqual>
+            </boolOr>
+        </if>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Operador vallido" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Por favor, vuelva a ingresar un valor" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <VariableSetter function="Setter" commented="false" instanceName="Operador" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableSetter>
+        <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Comment function="Code" commented="false" constantValue="Segundo bucle para tomar el operando 1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <while function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Operando1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberEqual>
+        </while>
+        <VariableSetter function="Setter" commented="false" instanceName="Operando1" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <IRRemote function="Sensor" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableSetter>
+        <Comment function="Code" commented="false" constantValue="Solo pruebo para dos, para que no sea largo el código" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <if function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <boolOr function="Operation" commented="false" paramsCount="2" hasAddParamsButton="true" loadAction="load">
+                <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                    <VariableGetter function="Getter" commented="false" instanceName="Operando1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                    <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                </numberEqual>
+                <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                    <VariableGetter function="Getter" commented="false" instanceName="Operando1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                    <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                </numberEqual>
+            </boolOr>
+        </if>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Operando 1 correcto!" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Por favor, vuelva a ingresar un valor" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <VariableSetter function="Setter" commented="false" instanceName="Operando1" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableSetter>
+        <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Comment function="Code" commented="false" constantValue="Tercer bucle para tomar el operando 2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <while function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Operando2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberEqual>
+        </while>
+        <VariableSetter function="Setter" commented="false" instanceName="Operando2" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <IRRemote function="Sensor" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableSetter>
+        <Comment function="Code" commented="false" constantValue="Solo pruebo para dos, para que no sea largo el código" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <if function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <boolOr function="Operation" commented="false" paramsCount="2" hasAddParamsButton="true" loadAction="load">
+                <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                    <VariableGetter function="Getter" commented="false" instanceName="Operando2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                    <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                </numberEqual>
+                <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                    <VariableGetter function="Getter" commented="false" instanceName="Operando2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                    <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                </numberEqual>
+            </boolOr>
+        </if>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Operando 2 correcto!" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Por favor, vuelva a ingresar un valor" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <VariableSetter function="Setter" commented="false" instanceName="Operando2" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </VariableSetter>
+        <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Comment function="Code" commented="false" constantValue="Averiguo la operación que el usuario ingreso " paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <if function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Operador" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <RemoteControlCode function="Constant" commented="false" instanceName="BOTON_DERECHA" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberEqual>
+        </if>
+        <VariableSetter function="Setter" commented="false" instanceName="Resultado" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberAdd function="Operation" commented="false" paramsCount="2" hasAddParamsButton="true" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Operando1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <VariableGetter function="Getter" commented="false" instanceName="Operando2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberAdd>
+        </VariableSetter>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Suma" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialNumber function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Resultado" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialNumber>
+        </Serial>
+        <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <VariableSetter function="Setter" commented="false" instanceName="Resultado" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberSub function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Operando1" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <VariableGetter function="Getter" commented="false" instanceName="Operando2" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberSub>
+        </VariableSetter>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <textConstant function="Constant" commented="false" constantValue="Resta" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialText>
+        </Serial>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1500" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <SerialNumber function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <VariableGetter function="Getter" commented="false" instanceName="Resultado" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </SerialNumber>
+        </Serial>
+        <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+    </blocks>
+</mbqc>
