@@ -11,8 +11,8 @@ Imprimir por la salida serial un mensaje, una única vez
 
 ### Uso de ciclo de control, variables y delay
 Imprimir varias veces el mensaje por la salida serial
-* Caso con while y delay: Buckle_con_delay_01.mbqc
-* Caso con for, variable y delay: Buckle_con_delay_02.mbqc
+* Caso con while y delay: Bucle_con_delay_01.mbqc
+* Caso con for, variable y delay: Bucle_con_delay_02.mbqc
 
 ### Uso de condicional
 Imprimir un mensaje distinto si el contador del ciclo for es par o impar
