@@ -95,22 +95,20 @@
                 <textConstant function="Constant" commented="false" constantValue="Numero aceptado" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
             </SerialText>
         </Serial>
-        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
-            <numberConstant function="Constant" commented="false" constantValue="2000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
-        </delay>
         <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
         <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
             <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
                 <textConstant function="Constant" commented="false" constantValue="Ingrese un numero (1)" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
             </SerialText>
         </Serial>
-        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
-            <numberConstant function="Constant" commented="false" constantValue="2000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
-        </delay>
         <VariableSetter function="Setter" commented="false" instanceName="Operando1" paramsCount="1" hasAddParamsButton="false" loadAction="load">
             <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
         </VariableSetter>
         <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Comment function="Code" commented="false" constantValue="Espero 2 segundos" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="2000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
         <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
         <while function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
             <numberEqual function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
@@ -185,22 +183,20 @@
                 <textConstant function="Constant" commented="false" constantValue="Numero aceptado" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
             </SerialText>
         </Serial>
-        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
-            <numberConstant function="Constant" commented="false" constantValue="2000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
-        </delay>
         <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
         <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
             <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
                 <textConstant function="Constant" commented="false" constantValue="Ingrese un numero (2)" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
             </SerialText>
         </Serial>
-        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
-            <numberConstant function="Constant" commented="false" constantValue="2000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
-        </delay>
         <VariableSetter function="Setter" commented="false" instanceName="Operando2" paramsCount="1" hasAddParamsButton="false" loadAction="load">
             <numberConstant function="Constant" commented="false" constantValue="0" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
         </VariableSetter>
         <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <Comment function="Code" commented="false" constantValue="Espero 2 segundos" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="2000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
         <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
         <Serial function="Setter" commented="false" instanceName="serial0" paramsCount="1" hasAddParamsButton="false" loadAction="load">
             <SerialText function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
